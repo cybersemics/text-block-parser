@@ -1,5 +1,5 @@
 {
-  "name": "jex-block-parser",
+  "name": "text-block-parser",
   "version": "1.0.0",
   "main": "lib/index.js",
   "description": "parse blocks of text based on indentation",
@@ -23,6 +23,9 @@
   },
   "author": "Jeremy Greer <jex.grizzle@gmail.com>",
   "license": "ISC",
+  "contributors": [
+    "Raine Revere <raine@cybersemics.org>"
+  ],
   "devDependencies": {
     "@babel/cli": "7",
     "@babel/core": "^7.0.0-0",

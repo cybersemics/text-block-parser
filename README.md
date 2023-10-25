@@ -1,4 +1,9 @@
-# jex-block-parser
+# text-block-parser
+
+- Add types
+- Add maxNodes option
+
+---
 
 Partition text based on indentation.
 
@@ -8,7 +13,7 @@ Partition text based on indentation.
 ## Usage
 
 ```js
-const { parse } = require('jex-block-parser')
+const { parse } = require('text-block-parser')
 
 let input = `
 hello
