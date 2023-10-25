@@ -21,6 +21,12 @@ parse(input)
   { scope: 'world', children: [] } ]
 ```
 
+The maximum number of children is 100 by default. Additional children will be dropped. To allow more children, you can specify `maxNodes` in the second arguments:
+
+```
+parse(input, Infinity)
+```
+
 ### Deep
 
 We don't care about blank lines or the [type of

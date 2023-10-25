@@ -45,7 +45,7 @@ export const collapse = (list, maxNodes = 100) => {
     tail = list.slice(i + 1)
     const nextScopeIndex = findNextEquivalentScope(scope, tail)
     const children = findLinesWithinScope(scope, tail)
-    const collapsedChildren = collapse(children)
+    const collapsedChildren = collapse(children, maxNodes)
     result.push({
       scope,
       children: collapsedChildren,
@@ -55,11 +55,11 @@ export const collapse = (list, maxNodes = 100) => {
     } else {
       break
     }
-  } while (1 && count++ < maxNodes)
+  } while (++count < maxNodes)
 
   return result
 }
 
-export const parse = (text) => {
-  return collapse(text.split('\n').filter(x => x))
+export const parse = (text, maxNodes) => {
+  return collapse(text.split('\n').filter(x => x), maxNodes)
 }

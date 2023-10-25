@@ -1,7 +1,7 @@
 import * as mod from '.'
 
-const log = (x) =>
-  console.log(JSON.stringify(x, null, '  '))
+// const log = (x) =>
+//   console.log(JSON.stringify(x, null, '  '))
 
 describe('isWithinScope', () => {
   it('should is', () => {
@@ -161,6 +161,62 @@ describe('collapse', () => {
       },
     ])
   })
+})
+
+describe('maxNodes', () => {
+  const input = `
+- a
+  - b
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+- c
+  - d
+    - e`
+
+  const result = mod.parse(input, 3)
+  expect(result).toEqual(
+    [
+      {
+        'scope': '- a',
+        'children': [
+          {
+            'scope': '  - b',
+            'children': [
+              {
+                'scope': '    - 1',
+                'children': []
+              },
+              {
+                'scope': '    - 2',
+                'children': []
+              },
+              {
+                'scope': '    - 3',
+                'children': []
+              },
+            ]
+          }
+        ]
+      },
+      {
+        'scope': '- c',
+        'children': [
+          {
+            'scope': '  - d',
+            'children': [
+              {
+                'scope': '    - e',
+                'children': []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  )
 })
 
 describe('mac daddy', () => {
