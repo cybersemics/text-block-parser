@@ -2,7 +2,7 @@
   "name": "text-block-parser",
   "version": "1.1.0",
   "main": "lib/index.js",
-  "description": "parse blocks of text based on indentation",
+  "description": "Parse blocks of text based on indentation.",
   "keywords": [
     "parse",
     "block",
@@ -26,6 +26,14 @@
   "contributors": [
     "Raine Revere <raine@cybersemics.org>"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cybersemics/text-block-parser.git"
+  },
+  "homepage": "https://github.com/cybersemics/text-block-parser",
+  "bugs": {
+    "url": "https://github.com/cybersemics/text-block-parser/issues"
+  },
   "devDependencies": {
     "@babel/cli": "7",
     "@babel/core": "^7.0.0-0",

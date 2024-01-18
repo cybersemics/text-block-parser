@@ -1,21 +1,26 @@
 # text-block-parser
 
-- Add types
-- Add maxNodes option
+[![npm version](https://img.shields.io/npm/v/text-block-parser)](https://www.npmjs.com/package/text-block-parser)
 
----
+**Parse blocks of text based on indentation.**
 
-Partition text based on indentation.
+This is a fork of https://github.com/reergymerej/block-parser that adds:
 
-[![Build Status](https://travis-ci.org/reergymerej/block-parser.svg?branch=master)](https://travis-ci.org/reergymerej/block-parser)
+- types
+- maxNodes option
 
+## Install
+
+```
+npm install text-block-parser
+```
 
 ## Usage
 
 ```js
 const { parse } = require('text-block-parser')
 
-let input = `
+const input = `
 hello
 world
 `
@@ -26,7 +31,7 @@ parse(input)
   { scope: 'world', children: [] } ]
 ```
 
-The maximum number of children is 100 by default. Additional children will be dropped. To allow more children, you can specify `maxNodes` in the second arguments:
+The maximum number of children is 100 by default. Additional children will be dropped. To allow more children, you can specify `maxNodes` in the second argument:
 
 ```
 parse(input, Infinity)
