@@ -1,6 +1,6 @@
 {
   "name": "text-block-parser",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "lib/index.js",
   "description": "Parse blocks of text based on indentation.",
   "keywords": [
